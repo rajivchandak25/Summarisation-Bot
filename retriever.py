@@ -20,5 +20,5 @@ class Retriever:
 
         scores = util.pytorch_cos_sim(query_emb, summary_embs)[0]
         best_idx = scores.argmax().item()
-
+        
         return summaries[best_idx]
